@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<title>Aikido-Styles : <?=$pTitle; ?></title>
+	<title>Dojo de l'Instant Présent : <?=$page ?></title>
 	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
 	<meta charset ="utf-8">
 	<meta name="description" content="Qi Gong, Méditation, Aïkido… Allez à la rencontre de votre Essentiel." />
@@ -20,10 +20,7 @@
 	</header>
 	<nav>
 			<ul id="menu">
-				<li><a href="index.php?page=titre-1" title="titre-1">Aikido</a></li><!--
-				--><li><a href="index.php?page=titre-2" title="titre-2">Titre-2</a></li><!--
-				--><li><a href="index.php?page=titre-3" title="titre-3">Titre-3</a></li><!--
-				--><li><a href="index.php?page=titre-4" title="titre-4">Titre-4</a></li><!--
-				--><li><a href="index.php?page=titre-5" title="titre-5">Titre-5</a></li>
+				  <?php print_nav($headings); ?>
 			</ul>
 	</nav>
+	<main>

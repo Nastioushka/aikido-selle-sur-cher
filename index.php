@@ -1,54 +1,53 @@
 <?php
 
-$page = null;
-$page = $_GET;
-$rubriques =[];
+$headings = [ ["aikido" => "Aïkido"],
+							["principes" => "Principes de l'Aïkido"],
+							["relations" => "La relation Sempai-Kōhai"],
+              ["qicong" => "Qi Gong"],
+              ["adresse" => "Nous contacter"],];
 
-//Géstion de la rédirrection
-foreach ($_GET as $key => $value)
-{
-	array_push($rubriques, $key);
+$page = "aikido";
+
+function print_nav($headings) {
+  for ($i=0; $i < sizeof($headings); $i++) {
+    foreach ($headings[$i] as $key => $value) {
+      print '<li><a href=index.php?page='.$key.'>'.$value.'</a></li>';
+    }
+  }
 };
 
-foreach ($rubriques as $key => $value)
-{
-	if($value != 'page')
-	{
-		header('Location: index.php');
-	}
-};
+include "header.phtml";
 
-//Navigation sur les rubriques
-if ($page != null)
-{
-	$page = $_GET['page'];
-	switch ($page)
-	{
-	case 'titre-1' :
-		include 'index.phtml';
-		break;
-	case 'titre-2':
-		include 'titre-2.phtml';
-		break;
-	case 'titre-3':
-		include 'titre-3.phtml';
-		break;
-	case 'titre-4':
-		include 'titre-4.phtml';
-		break;
-	case 'titre-5':
-		include 'titre-5.phtml';
-		break;
-	default:
-		include 'index.phtml';
-		break;
-	};
+if ($_GET!=null) {
+  switch ($_GET['page']) {
+
+    case 'aikido':
+      include 'aikido.phtml';
+			$page = "aikido";
+    break;
+    case 'qicong':
+      include  'qicong.phtml';
+			$page = "qi-cong";
+    break;
+		case 'principes':
+      include  'principes.phtml';
+			$page = "principes";
+    break;
+		case 'relations':
+      include  'relations.phtml';
+			$page = "relations";
+    break;
+    case 'adresse':
+      include  'adresse.phtml';
+			$page = 'adresse';
+    break;
+    default:
+      include "aikido.phtml";
+			$page = "aikido";
+    break;
+  };
+} else {
+    include "aikido.phtml";
 }
-else
-{
-	include 'index.phtml';
-};
 
-
-//var_dump($rubriques);
-//var_dump($_GET);
+include "footer.phtml";

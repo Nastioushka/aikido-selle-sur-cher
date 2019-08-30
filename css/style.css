@@ -71,7 +71,6 @@ section {
 {
 	box-shadow: 0 0 15px #D9DEDD;
 	border: 1px solid #D9DEDD;
-	margin: 0.5em;
 }
 
 header {
@@ -231,5 +230,37 @@ footer ul {
 	h2 {
 		text-align: left;
 		text-indent: 1.5em;
+	}
+
+	.flex {
+		display: flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: -moz-flex;
+		display: -o-flex;
+	}
+
+	.space-between {
+		justify-content: space-between;
+	}
+
+	.space-around {
+		justify-content: space-around;
+	}
+
+	.grow-1>* {
+		flex-grow: 1;
+	}
+
+	.direction-row>* {
+		-webkit-flex-dirrection: row;
+		-ms-flex-dirrection: row;
+		-moz-flex-direction: row;
+		-o-flex-direction: row;
+		flex-direction: row;
+	}
+
+	.basline>*{
+		align-items: baseline;
 	}
 }
