@@ -1,0 +1,235 @@
+/*Taille mobile*/
+
+/*Declaration Polices*/
+@font-face {
+	font-family: 'SortsMillGoudy';
+	src: url("../fonts/SortsMillGoudy-Regular.ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'shojumaru';
+	src: url("../fonts/shojumaru-regular.ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Roman_SD';
+	src: url("../fonts/Roman_SD.ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*Généralités*/
+*{
+	box-sizing: border-box;
+	outline: none;
+	text-decoration: none;
+	transition: all .2s ease 0s;
+}
+
+*:hover {
+	transition: all .2s ease 0s;
+}
+
+html {
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	-moz-flex-direction: column;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'SortsMillGoudy', Georgia, serif;
+	font-size: 1.2em;
+	line-height: 1.7;
+}
+
+#conteineur, section, header h1 {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+a, a:hover, a:visited, a:active {
+	text-decoration: none;
+	color: black;
+}
+
+img {
+	max-width: 100%;
+}
+
+section {
+	padding: 1em;
+}
+
+#conteineur
+{
+	box-shadow: 0 0 15px #D9DEDD;
+	border: 1px solid #D9DEDD;
+	margin: 0.5em;
+}
+
+header {
+	background-image: url(../img/torigate2Mobil.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+header div {
+	background-color: rgba(255,255,255, 0.8);
+	padding: 0.5em;
+}
+
+h1 {
+	font-family: 'Roman_SD', Georgia, serif;
+	text-align: center;
+	font-size: 1.5em;
+	color: #6d3a1f;
+}
+
+header h1 {
+	letter-spacing: 1rem;
+	font-size: 1.5em;
+	color: black;
+	text-shadow: 5px 5px 10px black
+}
+
+header h2 {
+	font-family: 'Roman_SD', Georgia, serif;
+	font-size: 1.2em;
+	color: black;
+	text-align: center;
+}
+
+h2 {
+	color: rgb(125, 49, 22);
+	font-family: 'SortsMillGoudy', Georgia, serif;
+	text-align : center;
+}
+
+p {
+	text-indent: 1.5em;
+	text-align: justify;
+	color: #393835;
+}
+
+iframe {
+	max-width: 100%;
+	margin: 1em;
+
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+article ul {
+	text-align: center;
+}
+
+strong {
+	text-transform: uppercase;
+}
+
+#menu li{
+	padding: 0.3em;
+}
+
+#menu {
+	background-color: black;
+	text-align: center;
+}
+
+#menu li a {
+	color: white;
+}
+
+#menu li a:hover {
+	font-weight: bold;
+	text-shadow: 0 0 10 white;
+}
+
+.center {
+	text-align: center;
+}
+
+.left {
+	text-align: left;
+	margin-left: 2em;
+}
+
+.left li::before {
+
+	content: ' '"\002705"' ';
+}
+
+#maps {
+	text-align: center;
+}
+
+footer {
+	text-align: center;
+	margin-bottom: 3em;
+}
+footer ul {
+	font-family: Tahoma, sans-serif;
+}
+
+#goUp {
+	position: fixed;
+	width: 100%;
+	bottom: 0px;
+	text-align: center;
+}
+
+#goUp a i {
+	color: rgb(247,241,227);
+	font-size: 30px;
+	margin: 0 auto;
+}
+
+/*Taille tablette*/
+@media screen and (min-device-width: 640px)
+{
+	header {
+	background-image: url(../img/torigate2.jpg);
+	padding: 30px 0 30px 0;
+	}
+
+	header div {
+		padding: 1em 0 1em 0;
+	}
+
+	#conteineur {
+		margin: 0 auto;
+	}
+
+	nav ul {
+		display:	-webkit-flex;
+		display:	-ms-flex;
+		display:	-moz-flex;
+		display:	flex;
+		justify-content: space-around;
+	}
+
+	nav ul li{
+		padding: 0.3em;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		-moz-flex-direction: row;
+		flex-direction: row;
+	}
+
+	h2 {
+		text-align: left;
+		text-indent: 1.5em;
+	}
+}
