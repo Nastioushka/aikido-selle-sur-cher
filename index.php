@@ -4,6 +4,7 @@ $headings = [ ["aikido" => "Aïkido"],
 							["principes" => "Principes de l'Aïkido"],
 							["relations" => "La relation Sempai-Kōhai"],
               ["qicong" => "Qi Gong"],
+							["meditation" => "Meditation"],
               ["adresse" => "Nous contacter"],];
 
 $page = "aikido";
@@ -40,6 +41,10 @@ if ($_GET!=null) {
     case 'adresse':
       include  'adresse.phtml';
 			$page = 'adresse';
+    break;
+		case 'meditation':
+      include  'meditation.phtml';
+			$page = 'meditation';
     break;
     default:
       include "aikido.phtml";
