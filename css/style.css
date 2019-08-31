@@ -59,8 +59,19 @@ a, a:hover, a:visited, a:active {
 	color: black;
 }
 
+i {
+	font-style: italic;
+}
+
 img {
 	max-width: 100%;
+}
+
+article img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
 }
 
 section {
@@ -74,7 +85,7 @@ section {
 }
 
 header {
-	background-image: url(../img/torigate2Mobil.jpg);
+	background-image: url(../img/arbre_mobile.png);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -130,8 +141,10 @@ ul {
 	padding: 0;
 }
 
-article ul {
-	text-align: center;
+article ul li:before
+{
+    content: '\2713';
+    margin: 0 1em;
 }
 
 strong {
@@ -166,19 +179,18 @@ strong {
 }
 
 .left li::before {
-
 	content: ' '"\002705"' ';
 }
 
-#maps {
-	text-align: center;
+.shadow:hover  {
+	box-shadow: 0 0 15px #D9DEDD;
 }
 
 footer {
 	text-align: center;
 	margin-bottom: 3em;
 }
-footer ul {
+footer ul, .shedules {
 	font-family: Tahoma, sans-serif;
 }
 
@@ -199,7 +211,7 @@ footer ul {
 @media screen and (min-device-width: 640px)
 {
 	header {
-	background-image: url(../img/torigate2.jpg);
+	background-image: url(../img/arbre.png);
 	padding: 30px 0 30px 0;
 	}
 
@@ -231,6 +243,23 @@ footer ul {
 		text-align: left;
 		text-indent: 1.5em;
 	}
+
+	article img:nth-of-type(odd) {
+		float: left;
+		margin-right: 20px;
+	}
+
+	article img:nth-of-type(even) {
+		float: right;
+		margin-left: 20px;
+	}
+
+	.clear::after {
+   content: "";
+   display: block;
+   clear: both;
+	}
+
 
 	.flex {
 		display: flex;
